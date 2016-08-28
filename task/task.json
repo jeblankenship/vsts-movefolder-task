@@ -1,0 +1,48 @@
+{
+    "id": "44965BCF-B4EA-4C2E-9BED-F34548F9767C",
+    "name": "moveFolder",
+    "friendlyName": "Move Folder",
+    "description": "Move folder to new destination.",
+	"helpMarkDown": "[More Information](https://github.com/jeblankenship/vsts-movefolder-task#readme)",
+    "category": "Utility",
+    "visibility": [
+        "Build",
+		"Release"
+    ],
+    "author": "James Blankenship",
+    "version": {
+        "Major": 0,
+        "Minor": 1,
+        "Patch": 2
+    },
+    "minimumAgentVersion": "1.92.0",
+    "inputs": [
+        {
+            "name": "sourceFolder",
+            "type": "filePath",
+            "label": "Folder To Move",
+            "defaultValue": "$(build.sourcesdirectory)",
+            "required": true,
+            "helpMarkDown": "Folder to move."
+        },
+        {
+            "name": "destinationFolder",
+            "type": "filePath",
+            "label": "Destination",
+            "defaultValue": "$(build.sourcesdirectory)",
+            "required": true,
+            "helpMarkDown": "Where to move the folder to."
+        }
+    ],
+    "instanceNameFormat": "Move folder $(sourceFolder)",
+    "execution": {
+        "PowerShell": {
+            "target": "$(currentDirectory)\\move-folder.ps1",
+            "argumentFormat": "",
+            "workingDirectory": "$(System.DefaultWorkingDirectory)"
+		}
+    },
+    "messages": {
+        "NoFiles": "Source folder missing."
+    }
+}
