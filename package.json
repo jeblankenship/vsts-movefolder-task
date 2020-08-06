@@ -1,6 +1,6 @@
 {
   "name": "docsCode.vsts-movefolder-task",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Build task for VS Team Services that moves a folder to another folder.",
   "author": "James Blankenship",
   "license": "MIT",
@@ -26,7 +26,7 @@
     "gulp-util": "^3.0.0",
     "merge-stream": "^1.0.0",
     "shelljs": "^0.3.0",
-    "minimist": "1.1.1",
+    "minimist": "1.2.3",
     "semver": "4.3.3"
   }
 }
