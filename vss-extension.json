@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "movefolder",
     "name": "Move Folder",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "public": true,
     "publisher": "docscode",
     "targets": [
